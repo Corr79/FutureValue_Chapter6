@@ -16,13 +16,13 @@ namespace FutureValue
             int months = years * 12;
             decimal monthlyInterestRate = yearlyInterestRate / 12 / 100;
 
-            decimal futureValue = CalculateFutureValue(monthlyInvestment, months, monthlyInterestRate);
+            decimal futureValue = CalculateFutureValue(monthlyInvestment, monthlyInterestRate, months);
 
             txtFutureValue.Text = futureValue.ToString("c");
             txtMonthlyInvestment.Focus();
         }
 
-        private static decimal CalculateFutureValue(decimal monthlyInvestment, int months, decimal monthlyInterestRate)
+        private static decimal CalculateFutureValue(decimal monthlyInvestment, decimal monthlyInterestRate, int months)
         {
             decimal futureValue = 0m;
             for (int i = 0; i < months; i++)
